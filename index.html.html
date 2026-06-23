@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório de PPTs - URE Araçatuba</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8fafc; color: #1e293b; }
+        
+        /* Cabeçalho Profissional Azul */
+        header { background-color: #0f172a; color: white; padding: 40px 20px; text-align: center; border-bottom: 4px solid #3b82f6; }
+        header h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; }
+        header p { margin-top: 8px; color: #94a3b8; font-size: 16px; }
+        
+        /* Container Principal */
+        .container { display: flex; max-width: 1300px; margin: 30px auto; padding: 0 20px; gap: 30px; }
+        
+        /* Menu Lateral (Filtros/Categorias) */
+        nav { flex: 1; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); height: fit-content; }
+        nav h3 { margin-bottom: 15px; color: #0f172a; font-size: 18px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+        nav a { display: block; padding: 12px; color: #475569; text-decoration: none; border-radius: 6px; margin-bottom: 6px; font-weight: 500; transition: 0.2s; }
+        nav a:hover { background-color: #eff6ff; color: #2563eb; }
+        nav a.active { background-color: #3b82f6; color: white; }
+        
+        /* Área Central dos PPTs */
+        main { flex: 3; }
+        
+        /* Caixa de Boas-Vindas */
+        .caixa-introducao { background-color: #eff6ff; border-left: 4px solid #3b82f6; padding: 20px; border-radius: 8px; margin-bottom: 25px; }
+        .caixa-introducao h4 { color: #1e40af; font-size: 16px; margin-bottom: 5px; }
+        .caixa-introducao p { color: #1e3a8a; font-size: 14px; }
+
+        /* Grid de Cards dos PPTs */
+        .grid-ppts { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        
+        /* Card Individual de PPT */
+        .card-ppt { background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; }
+        .card-ppt:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+        
+        .badge { background-color: #f1f5f9; color: #475569; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 12px; }
+        .badge.urgente { background-color: #fee2e2; color: #991b1b; }
+        
+        .card-ppt h2 { font-size: 18px; color: #0f172a; margin-bottom: 8px; line-height: 1.4; }
+        .card-ppt .data { font-size: 13px; color: #64748b; margin-bottom: 15px; }
+        
+        /* Botão de Download */
+        .btn-download { display: flex; align-items: center; justify-content: center; background-color: #2563eb; color: white; text-decoration: none; padding: 10px; border-radius: 6px; font-weight: 600; font-size: 14px; text-align: center; transition: background-color 0.2s; gap: 8px; }
+        .btn-download:hover { background-color: #1d4ed8; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Repositório de Apresentações</h1>
+        <p>URE Araçatuba — Arquivo Digital de Reuniões e Alinhamentos</p>
+    </header>
+
+    <div class="container">
+        <!-- Menu Lateral para filtrar por ano/tipo -->
+        <nav>
+            <h3>📅 Reuniões 2026</h3>
+            <a href="#" class="active">All / Todas</a>
+            <a href="#">Governança</a>
+            <a href="#">Pedagógico</a>
+            <a href="#">Tecnologia e Redes</a>
+            <a href="#">Prestações de Contas</a>
+        </nav>
+
+        <!-- Painel de Arquivos -->
+        <main>
+            <div class="caixa-introducao">
+                <h4>📊 Espaço do Servidor</h4>
+                <p>Clique no botão azul do card correspondente para baixar a apresentação em PowerPoint (.pptx) da reunião desejada.</p>
+            </div>
+
+            <!-- Início do Grid de PPTs -->
+            <div class="grid-ppts">
+                
+                <!-- Exemplo de Card 1 -->
+                <div class="card-ppt">
+                    <div>
+                        <span class="badge">Pedagógico</span>
+                        <h2>Alinhamento SAEB e Saresp 2026</h2>
+                        <div class="data">📅 15 de Maio de 2026</div>
+                    </div>
+                    <!-- Altere o href para o nome do seu arquivo de PowerPoint -->
+                    <a href="ppts/alinhamento_saeb_2026.pptx" download class="btn-download">
+                        📥 Baixar PPTX
+                    </a>
+                </div>
+
+                <!-- Exemplo de Card 2 -->
+                <div class="card-ppt">
+                    <div>
+                        <span class="badge">Tecnologia e Redes</span>
+                        <h2>Manutenção de Equipamentos PROATI</h2>
+                        <div class="data">📅 02 de Junho de 2026</div>
+                    </div>
+                    <a href="ppts/manutencao_proati.pptx" download class="btn-download">
+                        📥 Baixar PPTX
+                    </a>
+                </div>
+
+                <!-- Exemplo de Card 3 -->
+                <div class="card-ppt">
+                    <div>
+                        <span class="badge urgente">Urgente</span>
+                        <h2>Diretrizes Finais Orçamento URE</h2>
+                        <div class="data">📅 19 de Junho de 2026</div>
+                    </div>
+                    <a href="ppts/diretrizes_orcamento.pptx" download class="btn-download">
+                        📥 Baixar PPTX
+                    </a>
+                </div>
+
+            </div> <!-- Fim do Grid -->
+        </main>
+    </div>
+
+</body>
+</html>
